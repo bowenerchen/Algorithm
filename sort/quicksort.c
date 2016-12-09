@@ -11,11 +11,11 @@ void quicksort(int* ele,int left,int right){
 			while(low<high && ele[high]>=flag){
 				high--;
 			}
-		    ele[low]=ele[high];
-			while(low<high && ele[low]<=flag){
+            ele[low]=ele[high];
+            while(low<high && ele[low]<=flag){
 				low++;
-			}
-			ele[high]=ele[low];
+            }
+            ele[high]=ele[low];
 		}
 		ele[low]=flag;
 		quicksort(ele,left,low-1);
@@ -25,7 +25,6 @@ return ;
 }
 
 int main(){
-	//int a[]={15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1};
 	int a[]={3,1,2,2,1,3,5,6,7,5,6,7};
 	int size=sizeof(a)/sizeof(int);
 	quicksort(a,0,size-1);
