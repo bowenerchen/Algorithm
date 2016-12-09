@@ -7,20 +7,20 @@ void quicksort(int* ele,int left,int right){
 		int high=right;
 		int low=left;
 		int flag=ele[left];
-		while(low<high){
-			while(low<high && ele[high]>=flag){
+        while(low<high){
+            while(low<high && ele[high]>=flag){
 				high--;
-			}
+            }
             ele[low]=ele[high];
             while(low<high && ele[low]<=flag){
 				low++;
             }
             ele[high]=ele[low];
 		}
-		ele[low]=flag;
-		quicksort(ele,left,low-1);
-		quicksort(ele,low+1,right);
-	}
+        ele[low]=flag;
+        quicksort(ele,left,low-1);
+        quicksort(ele,low+1,right);
+    }
 return ;
 }
 
