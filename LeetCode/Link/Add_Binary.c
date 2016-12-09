@@ -38,8 +38,6 @@ char* addBinary(char* a, char* b) {
     }
     if(up) {
         *ret='1';
-        /*加了下面这句才通过，否则不能通过，
-        不明白为什么要显式的指定这个值*/
         *(ret+1)='\0';
     }
     else{
